@@ -1,0 +1,39 @@
+body:has(.mode input:checked){
+    background: var(--color-white) ;
+}
+
+:root:has(.mode input:checked){
+    --main-color: #ff9d14;
+    --color-red-dark: #D78C23;
+    --color-light2: #fff;
+    --color-white2: #000;
+    --color-dark: #fff;
+    --color-white: #202020;
+    --color-light:#252525;
+}
+
+body:not(:has(:target)):has(.mode input:checked) .home-link,
+body:has(#home:target):has(.mode input:checked) .home-link,
+body:has(#chefs:target):has(.mode input:checked) .chefs-link,
+body:has(#gallery:target):has(.mode input:checked) .gallery-link,
+body:has(#contact:target):has(.mode input:checked) .contact-link
+{
+    color: #fff;
+}
+body:not(:has(:target)) .home-link::before,
+body:has(#home:target) .home-link::before,
+body:has(#chefs:target) .chefs-link::before,
+body:has(#gallery:target) .gallery-link::before,
+body:has(#contact:target) .contact-link::before
+{
+    width: 100%;
+}
+body:has(.mode input:checked) nav a:hover{
+    color: white;
+}
+body:has(.mode input:checked) .mode .light{
+    display: block;
+}
+body:has(.mode input:checked) .mode .dark{
+    display: none;
+}
